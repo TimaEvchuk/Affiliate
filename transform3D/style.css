@@ -1,0 +1,38 @@
+
+.plane {
+    height: 400px;
+    width: 300px;
+    background-color: rgb(78, 107, 70);
+    margin-bottom: 100px;
+    perspective: 600px;
+    perspective-origin: center;
+    
+}
+.plane__3d {
+    height: 400px;
+    width: 300px;
+    background-color: rgb(74, 109, 138);
+    
+    transform: rotateY(40deg);
+}
+.plane__translate3d {
+    height: 400px;
+    width: 300px;
+    background-color: rgb(204, 135, 31);
+    
+    transform: translate3d(40px, 40px, 50px);
+}
+.plane__rotate3d {
+    height: 400px;
+    width: 300px;
+    background-color: rgb(135, 31, 204);
+
+    transform: rotate3d(1, 1, 1, 30deg);
+}
+.plane__scale3d {
+    height: 400px;
+    width: 300px;
+    background-color: rgb(31, 164, 204);
+
+    transform: rotateX(40deg) scale3d(0.5, 0.5, 0.5) translateZ(100px);
+}

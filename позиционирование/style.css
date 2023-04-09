@@ -1,0 +1,52 @@
+.child {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 20px;
+    display: inline-block;
+}
+.child1 {
+    position: relative;
+    left: 35px;
+}
+.child2 {
+    position: absolute;
+    left:0px;
+    right: 0px;
+}
+.child3 {
+    position: relative;
+}
+.red {
+    position:absolute;
+    background-color: red;
+    height: 30px;
+    width: 30px;
+    bottom: 0px;
+    right: 0;
+}
+.child4 {
+    position: relative;
+    overflow: hidden;
+}
+.child4__red {
+    bottom: -10px;
+    
+}
+.scrolled {
+    height: 300px;
+    width: 300px;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+

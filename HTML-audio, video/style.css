@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.items {
+    width: 30%;
+}
+.items__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.item__body {
+}
+.wrapper video {
+    
+}
+.item__video video {
+    width: 100%;
+}
+
+.item__text {
+}

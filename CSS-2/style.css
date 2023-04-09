@@ -1,0 +1,121 @@
+:root {
+    --red: #aa1e1e;
+    --white: #e4dada;
+}
+.linear-gradient {
+    height: 300px;
+    width: 400px;
+    background-image: repeating-linear-gradient(45deg, black 25px, white 25px, white 50px, black 50px, black 75px, white 75px);
+}
+.radial-gradient {
+    height: 300px;
+    width: 400px;
+    background-image: repeating-radial-gradient(circle, aqua 20px, red 50px);
+}
+.variable {
+    height: 300px;
+    width: 400px;
+    background-color: #575757;
+    border:3px solid #222121;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.variable__title {
+    font-size: 46px;
+    margin-bottom: 50px;
+    color: var(--red);
+}
+.variable__text {
+    font-size: 18px;
+    color: var(--white);
+}
+body {
+    
+}
+.text {
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 30px;
+}
+.text:first-line {
+    color: green;
+}
+.text:first-letter {
+    color: red;
+}
+.list {
+    list-style-type: none;
+}
+.list li {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.list li::before {
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    margin-right: 10px;
+}
+.list li:hover:before {
+    background-color: blue;
+}
+.list li::after {
+    content: ">>";
+}
+.block-psevdo {
+    margin-bottom: 20px;
+}
+.block-psevdo p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.link-psevdo {
+    color: var(--red);
+}
+.link-psevdo:visited {
+    color: blueviolet;
+}
+.link-psevdo:hover {
+    text-decoration: none;
+    color: greenyellow;
+}
+.link-psevdo:active {
+    color: aqua;
+}
+.input-psevdo {
+    border: 1px solid #666;
+    height: 50px;
+    padding: 0px 15px;
+    font-size: 18px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+.btn-psevdo {
+    display: block;
+    width: 300px;
+    height: 50px;
+    background-color: #666;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.list-psevdo {
+    list-style-type: none;
+}
+.list-psevdo li {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.timba {
+    height: 200px;
+    width: 300px;
+    background-color:green;
+    margin-bottom: 20px;
+    transform: translate(50%, 20px) scale(1, 1.5) rotate(5deg);
+}
+
+  
