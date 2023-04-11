@@ -159,6 +159,10 @@ a {
     display: flex;
     align-items: center;
 }
+.header__link a {
+	display: flex;
+	align-items: center;
+}
 .header__singUp { 
     justify-self: self-end;
     display: flex;
@@ -430,7 +434,7 @@ a {
 	margin: 0 0 33px;
 }
 .aff-reviews__gridbox {
-	
+	background-color: coral;
 	overflow: hidden;
 }
 .slider-track {

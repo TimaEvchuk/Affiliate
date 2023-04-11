@@ -21,8 +21,16 @@ singUp.addEventListener('click', function() {
 });
 
 let position = 0;
-const slidesToShow = 2;
-const slidesToScroll = 1;
+let slidesToShow = 3;
+let slidesToScroll = 3;
+if (window.innerWidth <= 576) {
+	slidesToScroll = 1;
+	slidesToShow = 1;
+} else if (window.innerWidth < 850) {
+	slidesToScroll = 2;
+	slidesToShow = 2;
+} 
+
 const itemPadding = 40 * (slidesToShow - 1);
 const container = document.querySelector('.aff-reviews__gridbox');
 const track = document.querySelector('.slider-track');
@@ -34,31 +42,59 @@ const btnNext = document.querySelector('.btn-next');
 const itemWidth = Math.round((container.clientWidth - itemPadding) / slidesToShow);
 let movePosititon = (itemWidth * slidesToScroll) + (itemPadding / (slidesToShow - 1) * slidesToScroll);
 
+
+console.log(window.innerWidth >= 850);
+
 if(slidesToShow == 1) {
-	track.style.columnGap = `${0}px`;
-	movePosititon = (itemWidth * slidesToScroll);
+	movePosititon = (itemWidth * slidesToScroll + 40 * slidesToScroll);
 }
 
 items.forEach((item) => {
 	item.style.minWidth = `${itemWidth}px`;
 });
 let i = 0;
+let a = 0;
 btnNext.addEventListener('click', () => {
-	const itemsLeft = itemCount - ((Math.abs(position) - 40 * i + (slidesToShow * itemWidth))) / itemWidth;
+	const itemsLeft = itemCount - ((Math.abs(position) - 40 * i * (slidesToScroll) + (slidesToShow * itemWidth))) / itemWidth;
 
-	position -= itemsLeft >= slidesToScroll ? movePosititon : (itemsLeft * itemWidth + 80);
+	if (itemsLeft >= slidesToScroll) {
+		position -= movePosititon;
+	} else {
+		position -= itemsLeft * itemWidth + 40 * itemsLeft;
+	}
+
+	//position -= itemsLeft >= slidesToScroll ? movePosititon : (Math.round(itemsLeft) * itemWidth);
 	i++;
+	if (itemsLeft >= slidesToScroll) {
+		a += slidesToScroll;
+	} else {
+		a += itemsLeft;
+	}
 	setPosititon();
 	checkBtns();
-	console.log(position, i, itemsLeft);
+	console.log(position, i, movePosititon, itemsLeft, a);
+	
 });
 btnPrev.addEventListener('click', () => {
-	const itemsLeft = (Math.abs(position) - 40 * (i + 1)) / itemWidth;
-	position += itemsLeft >= slidesToScroll ? movePosititon : (itemsLeft * itemWidth + 80);
+	const itemsRight = (Math.abs(position) - 40 * a) / itemWidth;
+
+	if (itemsRight >= slidesToScroll) {
+		position += movePosititon;
+	} else {
+		position += itemsRight * itemWidth + 40 * itemsRight;
+	}
+
+	if (a >= slidesToScroll) {
+		a -= slidesToScroll;
+	} else {
+		a -= a;
+	}
 	i--;
+	//position += itemsLeft >= slidesToScroll ? movePosititon : (itemsLeft * itemWidth + 80);
+	console.log(position, i, movePosititon, itemsRight, a);
 	setPosititon();
 	checkBtns();
-	console.log(position, i, itemsLeft);
+	
 });
 
 const setPosititon = () => {
@@ -71,6 +107,3 @@ const checkBtns = () => {
 }
 
 checkBtns();
-console.log(position);
-console.log();
-console.log(movePosititon);
