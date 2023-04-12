@@ -62,7 +62,7 @@ btnNext.addEventListener('click', () => {
 		position -= itemsLeft * itemWidth + 40 * itemsLeft;
 	}
 
-	//position -= itemsLeft >= slidesToScroll ? movePosititon : (Math.round(itemsLeft) * itemWidth);
+	//position -= itemsLeft 2>= slidesToScroll ? movePosititon : (Math.round(itemsLeft) * itemWidth);
 	i++;
 	if (itemsLeft >= slidesToScroll) {
 		a += slidesToScroll;
@@ -92,7 +92,6 @@ btnPrev.addEventListener('click', () => {
 	console.log(position, i, movePosititon, itemsRight, a);
 	setPosititon();
 	checkBtns();
-	
 });
 
 const setPosititon = () => {
