@@ -30,7 +30,6 @@ if (window.innerWidth <= 576) {
 	slidesToScroll = 2;
 	slidesToShow = 2;
 } 
-
 const itemPadding = 40 * (slidesToShow - 1);
 const container = document.querySelector('.aff-reviews__gridbox');
 const track = document.querySelector('.slider-track');
@@ -90,7 +89,6 @@ btnPrev.addEventListener('click', () => {
 		a -= a;
 	}
 	i--;
-	//position += itemsLeft >= slidesToScroll ? movePosititon : (itemsLeft * itemWidth + 80);
 	console.log(position, i, movePosititon, itemsRight, a);
 	setPosititon();
 	checkBtns();
