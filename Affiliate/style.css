@@ -162,6 +162,7 @@ a {
 .header__link a {
 	display: flex;
 	align-items: center;
+	line-height: 40px;
 }
 .header__singUp { 
     justify-self: self-end;
@@ -427,9 +428,6 @@ a {
 .aff-reviews {
 	margin: 97px 0 0;
 }
-.aff-reviews__container {
-}
-
 .aff-reviews__title {
 	margin: 0 0 33px;
 }
@@ -461,6 +459,7 @@ a {
 	
 }
 .card {
+	height: 100%;
 }
 .card__name {
 	background: rgba(29, 47, 56, 0.8);
@@ -478,18 +477,28 @@ a {
 	
 }
 .card__body {
+	height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr;
 }
 .card__img {
-	max-width: 100%;
+	height: 200px;
+	grid-row: 1 / 2;
+	overflow: hidden;
 }
 .card img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 .card__info {
 	background: #F7F9FA;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	padding: 24px 25px 40px;
+	grid-row: 2 / 3;
+	
 }
 .card__title {
 	margin: 0 0 13px;
@@ -504,11 +513,182 @@ a {
 	align-items: center;
 	margin: 40px 0 0;
 }
-.play__img {
+.aff-reviews__all-product a:hover{
+	text-decoration: underline;
 }
-.all-blog__text {
+/*--------------------aff-newsletter-------------------*/
+
+.aff-newsletter {
+	margin: 100px 0 0;
 }
-.all-reviews__text {
+.aff-newsletter__container {
+}
+.aff-newsletter__body {
+	display: flex;
+	background-image: url('images/aff-newsletter/newsletter-background.png');
+	background-size: 100% 100%;
+	padding: 50px;
+	gap: 50px;
+	border-radius: 10px;
+	align-items: center;
+}
+.aff-newsletter__img {
+	flex-basis: 50%;
+}
+.aff-newsletter__img img{
+	width: 100%;
+}
+.aff-newsletter__info {
+	flex-basis: 50%;
+}
+.aff-newsletter__title-svg {
+	display: flex;
+	align-items: center;
+	margin: 0 0 30px;
+}
+.aff-newsletter__svg {
+	min-width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #fff;
+	position: relative;
+	margin: 0 10px 0 0;
+}
+.aff-newsletter__svg img {
+	position: absolute;
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
+}
+
+.aff-newsletter__subtitle {
+	font-size: 18px;
+	line-height: 133%;
+  color: var(--grey);
+	margin: 0 0 24px;
+}
+.aff-newsletter__form {
+	margin: 0 0 30px;
+}
+.aff-newsletter__email {
+	font-size: 12px;
+	line-height: 167%;
+	color: black;
+	width: 100%;
+	padding: 15px 0 15px 16px;
+	border: 1px solid #AABCC5;
+	border-radius: 5px;
+	background-color: #fff;
+	transition: all 0.1s ease-out;
+}
+.aff-newsletter__email::placeholder {
+	color: #536D7A;
+}
+.aff-newsletter__email:hover {
+	background-color: rgb(244, 244, 244);
+}
+.aff-newsletter__email:focus {
+	background-color: #fff;
+}
+.aff-newsletter__btns {
+	display: flex;
+	align-items: center;
+}
+.aff-newsletter__btn-yellow {
+	font-size: 12px;
+	line-height: 167%;
+ 	color: black;
+	font-weight: 700;
+	background-color: #FFC728;
+	border-radius: 5px;
+	transition: all 0.2s ease;
+}
+.aff-newsletter__btn-yellow:hover {
+	transform: translateY(-3px);
+	box-shadow: 0px 3px 0px #695111;
+	background-color: #fed155;
+}
+.aff-newsletter__btn-yellow:active {
+	transition: all 0.2s ease;
+	background: #FFC728;
+	transform: translateY(0px);
+	box-shadow: 0px 0px 0px;
+}
+.aff-newsletter__btn-yellow a {
+	padding: 15px 20px;
+	line-height: 50px;
+}
+.aff-newsletter__btn-privacy {
+	font-size: 12px;
+	line-height: 167%;
+	color: #536D7A;
+	margin: 0 0 0 10px;
+}
+.aff-newsletter__btn-privacy a:hover {
+	text-decoration: underline;
+} 
+/*------------------------footer----------------------*/
+.footer {
+	background-color: #F7F9FA;
+	margin: 100px 0 0;
+}
+.footer__container {
+}
+
+.footer__body {
+	display: flex;
+}
+.footer__bio {
+	max-width: 306px;
+}
+.footer__logo {
+	margin: 0 0 11px;
+}
+.footer__bio-links {
+	display: flex;
+	margin: 0 0 19px;
+}
+
+.footer__bio-text {
+	font-size: 16px;
+	line-height: 125%;
+	color: var(--grey);
+}
+.footer__bio-text span {
+	font-weight: 700;
+}
+.footer__last-article {
+	max-width: 356px;
+}
+.last-article {
+}
+.last-article__title {
+	color: #333;
+}
+.last-article__blogs{
+
+}
+.footer__browser {
+}
+.footer__browser-title {
+	color: #333;
+}
+.footer__browser-search {
+}
+.footer__nav {
+}
+.footer__nav-links {
+}
+.footer__nav-link {
+}
+.footer-browser__brand-name {
+}
+.footer__hr {
+}
+.footer__links {
+}
+.footer__law {
+}
+.footer__creators {
 }
 @media (max-width: 850px) {
 /*-----------------------------------------------aff-template---------------------------------*/
@@ -586,7 +766,42 @@ a {
 		.aff-list-product__text {
 			font-size: 24px;
 		}
+	/*-----------------------aff-newsletter-------------------*/
+		.aff-newsletter {
+			margin: 70px 0 0;
+		}	
+		.aff-newsletter__body {
+			gap: 30px;
+			padding: 40px;
+			flex-direction: column;
+			
+		}
+		.aff-newsletter__img {
+			order: 2;
+		}
+		.aff-newsletter__info {
+			order: 1;
+			max-width: 500px;
+		}
+		.aff-newsletter__btns {
+			justify-content: center;
+		}
+		.aff-newsletter__btn-yellow{
+			
+		}
+		.aff-newsletter__btn-yellow a{
+			
+		}
 	}
+@media (max-width: 680px) {
+	/*---------------------aff-reviews------------------*/
+		.card__img {
+			height: 150px;
+		}
+		.card__title {
+			font-size: 27px;
+		}
+}
 @media (max-width: 576px) {
 	/*--------------------header--------------------*/
     .menu__burger {
@@ -689,9 +904,14 @@ a {
 			margin: 50px 0 30px;
 		}
 	/*-------------------------aff-lsit-product-------------------------*/
+		.aff-list-product__container {
+			margin: 70px 0 0;
+		}
 		.aff-list-product__body {
 			flex-direction: column;
 			padding: 25px;
+			background-image: none;
+			background-color: #E3EBF1;
 		}
 		.aff-list-product__box {
 			margin: 0 0 30px;
@@ -700,6 +920,26 @@ a {
 			margin: 0;
 			width: 50%;
 			text-align: center;
+		}
+		.aff-list-product__btn a {
+			width: 100%;
+			display: inline-block;
+			line-height: 147%;
+		}
+	/*------------------------------aff-reviews-------------------------*/
+		.aff-reviews {
+			margin: 70px 0 0;
+		}
+		.aff-reviews__title {
+			font-size: 34px;
+		}
+		.card__img {
+			height: 200px;
+		}
+	/*------------------------aff-newsletter-------------------------*/
+		.aff-newsletter__body {
+			background-image: none;
+			background-color: #E3EBF1;
 		}
 }
 @media (max-width: 425px) {
@@ -739,7 +979,37 @@ a {
 		}
 		.aff-list-product__btn a{
 			padding: 12px 18px;
-			line-height: 46px;
+			
+		}
+	/*-------------aff-reviews---------------*/
+		.card__img {
+			height: 150px;
+		}
+		.card__info {
+			padding: 20px 20px 32px;
+		}
+		.aff-reviews__all-product {
+			margin: 30px 0 0;
+		}
+	/*-----------------------aff-newsletter----------------------*/
+		.aff-newsletter {
+			
+		}
+		.aff-newsletter__body {
+			padding: 20px;
+		}
+		.aff-newsletter__title {
+			font-size: 27px;
+		}
+		.aff-newsletter__svg {
+			min-width: 50px;
+			height: 50px;
+		}
+		.aff-newsletter__svg img {
+			height: 30px;
+			width: 30px;
+			top: calc(50% - 15px);
+			left: calc(50% - 15px);
 		}
 	}
 
