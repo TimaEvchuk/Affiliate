@@ -104,3 +104,41 @@ const checkBtns = () => {
 }
 
 checkBtns();
+let birdie = document.querySelectorAll('.birdie');
+let birdieBox = document.querySelectorAll('.birdie-box');
+let contents = document.querySelectorAll('.footer__content');
+
+for(let i = 0; i < birdieBox.length; i++) {
+	birdieBox[i].addEventListener('click', () => {
+
+		birdie[i].classList.toggle('active');
+
+		let content = contents[i];
+
+		content.classList.toggle('active');
+
+		if (content.style.maxHeight) {
+			content.style.maxHeight = null;
+		} else {
+			contents.forEach((elem) => {
+				elem.style.maxHeight = null;
+				elem.classList.remove('active');
+				birdie.forEach((elem) => {
+					elem.classList.remove('active');
+				});
+			})
+			content.classList.add('active')
+			birdie[i].classList.add('active');
+			content.style.maxHeight = content.scrollHeight + 'px';			
+		}
+
+	});
+}
+console.log(Array.from(contents));
+/*birdieBox[0].addEventListener('click', () => {
+	latesBlogs.classList.toggle('active');
+	
+});
+birdieBox[1].addEventListener('click', () => {
+	browserBody.classList.toggle('browser-body__active');
+});*/
