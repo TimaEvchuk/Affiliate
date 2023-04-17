@@ -126,8 +126,7 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-.nav {
-}
+
 .header a {
     color: var(--grey);   
 }
@@ -217,8 +216,6 @@ a {
 }
 /*-----------------------------affiliate-template-----------------------*/
 
-.main {
-}
 .aff-template {
 	padding: 0 25px;
 }
@@ -266,8 +263,7 @@ a {
 .aff-template__subtitle span {
 	font-weight: 700;
 }
-.aff-template__btn {
-}
+
 .btn-green {
 	display: inline-block;
 	background: #17A550;
@@ -294,9 +290,6 @@ a {
 
 /*-------------------------------------------aff-blog-------------------------------*/
 
-.aff-blog {
-
-}
 .aff-blog__container {
 	margin-top: 77px;
 }
