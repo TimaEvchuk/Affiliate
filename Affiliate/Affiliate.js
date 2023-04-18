@@ -62,7 +62,6 @@ btnNext.addEventListener('click', () => {
 		position -= itemsLeft * itemWidth + 40 * itemsLeft;
 	}
 
-	//position -= itemsLeft 2>= slidesToScroll ? movePosititon : (Math.round(itemsLeft) * itemWidth);
 	i++;
 	if (itemsLeft >= slidesToScroll) {
 		a += slidesToScroll;
@@ -71,8 +70,6 @@ btnNext.addEventListener('click', () => {
 	}
 	setPosititon();
 	checkBtns();
-	console.log(position, i, movePosititon, itemsLeft, a);
-	
 });
 btnPrev.addEventListener('click', () => {
 	const itemsRight = (Math.abs(position) - 40 * a) / itemWidth;
@@ -89,7 +86,6 @@ btnPrev.addEventListener('click', () => {
 		a -= a;
 	}
 	i--;
-	console.log(position, i, movePosititon, itemsRight, a);
 	setPosititon();
 	checkBtns();
 });
@@ -134,11 +130,4 @@ for(let i = 0; i < birdieBox.length; i++) {
 
 	});
 }
-console.log(Array.from(contents));
-/*birdieBox[0].addEventListener('click', () => {
-	latesBlogs.classList.toggle('active');
-	
-});
-birdieBox[1].addEventListener('click', () => {
-	browserBody.classList.toggle('browser-body__active');
-});*/
+
